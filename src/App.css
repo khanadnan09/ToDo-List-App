@@ -1,38 +1,148 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;500;600;700;800;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background-color: #bfcbd0;
+  display: flex;
+  justify-content: center;
+  transition: 450ms;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 40px 20px;
+}
+
+img {
+  height: 100px;
+  margin: 20px;
+}
+
+.heading {
+  margin: 0px 0px 20px 0px;
+  text-transform: capitalize;
+  font-size: 1.2rem;
+}
+
+.input {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+input {
+  padding: 10px 20px;
+  border: none;
+  font-size: 1rem;
+  outline: none !important;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.input ion-icon {
+  background-color: #3f52b6;
+  color: #fff;
+  font-size: 19px;
+  height: auto;
+  padding: 10px;
+  cursor: pointer;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.listItem {
+  transition: 450ms;
+  background-color: #fff;
+  margin: 10px 0px 20px 0px;
+  padding: 10px 10px 10px 20px;
+  min-width: 280px;
+  max-width: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 0.2rem;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.listItem ion-icon {
+  cursor: pointer;
+  transition: 450ms;
+  font-size: 18px;
+  color: #ffffff;
+  background-color: #3f52b6;
+  padding: 6px;
+  min-width: 18px;
+  border-radius: .2rem;
+  margin-left: 12px;
+}
+
+.listItem:hover {
+  background-color: #3f52b6;
+  color: #fff;
+}
+
+.listItem:hover ion-icon {
+  background-color: #ffffff;
+  color: #3f52b6;
+}
+.text{
+  word-break: break-all;
+  -ms-word-break: break-all;
+  margin-right: auto;
+}
+button {
+  border: none;
+  color: #fff;
+  background-color: #3f52b6;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 0.2rem;
+  box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
+  cursor: pointer;
+}
+.dark_mode_btn{
+  position: absolute;
+  right: 27px;
+  top: 20px;
+  background-color: #fff;
+  display: flex;
+  height: 35px;
+  width: 35px;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  border-radius: 0.2rem;
+  box-shadow: rgb(99 99 99 / 20%) 0px 2px 8px 0px;
+  cursor: pointer;
+}
+.dark_mode_btn ion-icon{
+  font-size: 22px;
+}
+/* darkMode css */
+.darkMode {
+  background-color: #03001e;
 }
 
-.App-link {
-  color: #61dafb;
+.darkMode button {
+  background-color: #0f0099;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.darkMode .listItem ion-icon {
+  background-color: #0f0099;
+}
+.darkMode .listItem:hover {
+  background-color: #0f0099;
+}
+.darkMode .listItem:hover ion-icon {
+  color: #0f0099;
+  background-color: #fff;
+}
+.darkMode .heading {
+  color: #ffffff;
+}
+.darkMode .input ion-icon { 
+  background-color: #0f0099;
 }
